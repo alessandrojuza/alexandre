@@ -12,12 +12,14 @@ const Footer = () => {
         <FacebookIcon className="btn btn-facebook" />
         <InstagramIcon className="btn btn-instagram" />
         <LinkedInIcon className="btn btn-linkedin" />
-        <AlternateEmailIcon className="btn btn-email" />
+        <a href="mailto:mascia.alessandro89@gmail.com">
+          <AlternateEmailIcon className="btn btn-email" />
+        </a>
       </div>
       <div className="footer-main">
         <div className="footer-link-container">
           <a href="#home">Home</a>
-          <a href="about">About</a>
+          <a href="#about">About</a>
           <a href="#shop">Shop</a>
           <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
         </div>

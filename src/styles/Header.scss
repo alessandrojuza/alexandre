@@ -36,6 +36,10 @@ $black: #000000;
         color: white;
       }
 
+      a:hover {
+        border-bottom: 1px solid white;
+      }
+
       .menu {
         display: flex;
         width: 400px;

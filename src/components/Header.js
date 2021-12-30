@@ -21,7 +21,7 @@ const Header = () => {
           </div>
         </div>
         <div className="div-2">
-          <FadeIn>
+          <FadeIn transitionDuration="2500">
             <h1>AS UNIQUE AS YOU ARE.</h1>
           </FadeIn>
         </div>
