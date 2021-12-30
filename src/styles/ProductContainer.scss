@@ -14,7 +14,8 @@
     // height: 100vh;
 
     display: grid;
-    justify-items: space-between;
+    justify-items: center;
+
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;

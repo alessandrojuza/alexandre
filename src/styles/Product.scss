@@ -10,6 +10,7 @@
   background: rgb(255, 255, 255);
   border-radius: 15px;
   transition: transform 0.2s;
+  transition: box-shadow 0.2s;
 
   .img-container {
     display: flex;
@@ -36,6 +37,11 @@
   .button-container {
     .btn {
       margin: 0 5px 0 5px;
+      transition: color 0.3s;
+    }
+
+    .btn:hover {
+      color: grey;
     }
 
     .btn:focus {
@@ -46,4 +52,5 @@
 
 .product:hover {
   transform: scale(1.02);
+  box-shadow: 4px 4px 10px rgb(219, 219, 219);
 }

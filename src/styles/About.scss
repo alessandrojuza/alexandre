@@ -15,5 +15,12 @@ h1 {
 
   .text-container {
     width: 500px;
+    background-image: url(../img/logo-overlay.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    p {
+      line-height: 36px;
+    }
   }
 }
