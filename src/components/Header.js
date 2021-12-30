@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Header.scss";
 import logo from "../img/logo.png";
 import FadeIn from "react-fade-in";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Header = () => {
   return (
@@ -14,6 +15,8 @@ const Header = () => {
             <p>About</p>
             <p>Shop</p>
             <p>Contact</p>
+            <ShoppingCartIcon className="btn" />
+
             <p></p>
           </div>
         </div>

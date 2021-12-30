@@ -1,0 +1,19 @@
+h1 {
+  margin: 70px 0 70px 0;
+}
+
+.about-sub-container {
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 70px;
+
+  img {
+    height: 600px;
+  }
+
+  .text-container {
+    width: 500px;
+  }
+}

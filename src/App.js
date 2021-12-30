@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header";
 import ProductContainer from "./components/ProductContainer";
+import About from "./components/About";
 import Footer from "./components/Footer";
-import ModalProduct from "./components/ModalProduct";
 
 function App() {
   const [productArray, setProductArray] = useState([]);
@@ -15,11 +15,8 @@ function App() {
         productArray={productArray}
         setProductArray={setProductArray}
       />
+      <About />
       <Footer />
-      <ModalProduct
-        productArray={productArray}
-        setProductArray={setProductArray}
-      />
     </div>
   );
 }
