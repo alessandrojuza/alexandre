@@ -13,7 +13,7 @@ const ProductContainer = ({ productArray, setProductArray }) => {
   }, []);
 
   return (
-    <div className="product-container-parent">
+    <div className="product-container-parent" id="shop">
       <div className="product-container-header">
         <h1>New Arrivals</h1>
       </div>

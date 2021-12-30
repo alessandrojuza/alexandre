@@ -54,6 +54,23 @@
     p {
       font-size: 11pt;
     }
+
+    a {
+      margin: 5px 0 5px 0;
+      text-decoration: none;
+      color: black;
+    }
+
+    a:visited {
+      color: black;
+    }
+
+    .footer-link-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   .footer-bottom {

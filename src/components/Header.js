@@ -6,15 +6,15 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" id="home">
       <div className="header-sub">
         <div className="div-1">
           <img src={logo} alt="logo" className="logo" />
           <div className="menu">
-            <p>Home</p>
-            <p>About</p>
-            <p>Shop</p>
-            <p>Contact</p>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#shop">Shop</a>
+            <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
             <ShoppingCartIcon className="btn" />
 
             <p></p>

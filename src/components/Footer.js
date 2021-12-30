@@ -16,10 +16,10 @@ const Footer = () => {
       </div>
       <div className="footer-main">
         <div className="footer-link-container">
-          <p>Home</p>
-          <p>About</p>
-          <p>Shop</p>
-          <p>Contact</p>
+          <a href="#home">Home</a>
+          <a href="about">About</a>
+          <a href="#shop">Shop</a>
+          <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
         </div>
         <div className="footer-address-container">
           <h4>Alexandre</h4>
