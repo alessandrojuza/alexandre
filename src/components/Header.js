@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Header.scss";
 import logo from "../img/logo.png";
-// import ArrowCircleDownRoundedIcon from "@mui/icons-material/ArrowCircleDownRounded";
+import FadeIn from "react-fade-in";
 
 const Header = () => {
   return (
@@ -18,7 +18,9 @@ const Header = () => {
           </div>
         </div>
         <div className="div-2">
-          <h1>AS UNIQUE AS YOU ARE.</h1>
+          <FadeIn>
+            <h1>AS UNIQUE AS YOU ARE.</h1>
+          </FadeIn>
         </div>
         <div className="div-3"></div>
       </div>

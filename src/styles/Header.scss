@@ -1,12 +1,15 @@
 $black: #000000;
-body {
-  overflow: hidden;
-}
 
 .header {
   height: 100vh;
   background-image: url(../img/header-img.jpg);
-  background-size: 100%;
+  background-size: cover;
+
+  .logo {
+    width: 200px;
+    margin-left: 30px;
+  }
+
   h1 {
     margin: 0;
     color: white;
@@ -24,15 +27,16 @@ body {
       align-items: center;
       padding: 20px;
 
-      .logo {
-        width: 200px;
-      }
-
       .menu {
         display: flex;
         width: 400px;
         justify-content: space-between;
         color: white;
+
+        p:hover {
+          border-bottom: 1px solid white;
+          cursor: default;
+        }
       }
     }
     .div-2 {

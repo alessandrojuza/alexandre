@@ -1,0 +1,25 @@
+.product-container-parent {
+  padding: 80px 87px 30px 87px;
+
+  background: rgb(240, 240, 240);
+  .product-container-header {
+    text-align: center;
+
+    h1 {
+      margin: 0px 0 70px 0;
+    }
+  }
+
+  .product-container {
+    // height: 100vh;
+
+    display: grid;
+    justify-items: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    color: black;
+  }
+}
