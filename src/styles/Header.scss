@@ -1,0 +1,49 @@
+$black: #000000;
+body {
+  overflow: hidden;
+}
+
+.header {
+  height: 100vh;
+  background-image: url(../img/header-img.jpg);
+  background-size: 100%;
+  h1 {
+    margin: 0;
+    color: white;
+  }
+  .header-sub {
+    display: grid;
+    grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    background: rgba(0, 0, 0, 0.541);
+    background-size: contain;
+    height: 100%;
+
+    .div-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+      .logo {
+        width: 200px;
+      }
+
+      .menu {
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        color: white;
+      }
+    }
+    .div-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-weight: 200;
+        font-size: 28pt;
+      }
+    }
+  }
+}

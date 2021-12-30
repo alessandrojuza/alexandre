@@ -1,0 +1,16 @@
+.App {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "div-header"
+    "div-product-container"
+    "div-footer";
+
+  text-align: center;
+}
