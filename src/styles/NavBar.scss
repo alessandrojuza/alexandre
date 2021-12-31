@@ -1,0 +1,21 @@
+.navbar {
+  position: fixed;
+  top: 0%;
+  width: 100vw;
+  height: 10vh;
+  background: white;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  overflow: scroll;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
