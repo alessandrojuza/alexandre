@@ -25,7 +25,6 @@ const About = () => {
             always looking for new ways to drive sustainability forward. We work
             hard to ensure animals don’t suffer for fashion and have strict
             sourcing guidelines for leather and producing animal-free products.
-            Read our Sustainability Strategy and Carbon 2020 Strategy below.
           </p>
         </div>
       </div>

@@ -3,7 +3,13 @@ import React, { useState, useEffect } from "react";
 import "../styles/ProductContainer.scss";
 import Product from "./Product";
 
-const ProductContainer = ({ productArray, setProductArray, showNavBar }) => {
+const ProductContainer = ({
+  productArray,
+  setProductArray,
+  showNavBar,
+  cartArray,
+  setCartArray,
+}) => {
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
@@ -26,6 +32,8 @@ const ProductContainer = ({ productArray, setProductArray, showNavBar }) => {
               priceUrl={e.price}
               id={e.id}
               description={e.description}
+              cartArray={cartArray}
+              setCartArray={setCartArray}
             />
           );
         })}

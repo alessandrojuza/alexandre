@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Header.scss";
 import logo from "../img/logo.png";
 import FadeIn from "react-fade-in";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import ModalCart from "./ModalCart";
 
-const Header = ({ showNavBar, setNavBarClass }) => {
+const Header = ({ showNavBar, setNavBarClass, cartArray, setCartArray }) => {
+  const [modalCartClass, setModalCartClass] = useState("hidden");
+  const showModalCart = () =>
+    modalCartClass === "hidden"
+      ? setModalCartClass("visible")
+      : setModalCartClass("hidden");
+
   return (
     <div className="header" id="home" onScroll={showNavBar}>
       <div className="header-sub">
@@ -17,7 +24,10 @@ const Header = ({ showNavBar, setNavBarClass }) => {
             <a href="#shop">Shop</a>
             <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
             <FavoriteIcon className="btn btn-favorite" />
-            <ShoppingCartIcon className="btn btn-cart" />
+            <ShoppingCartIcon
+              className="btn btn-cart"
+              onClick={showModalCart}
+            />
 
             <p></p>
           </div>
@@ -29,6 +39,11 @@ const Header = ({ showNavBar, setNavBarClass }) => {
         </div>
         <div className="div-3"></div>
       </div>
+      <ModalCart
+        modalCartClass={modalCartClass}
+        cartArray={cartArray}
+        setCartArray={setCartArray}
+      />
     </div>
   );
 };

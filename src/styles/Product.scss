@@ -9,6 +9,7 @@
   border: 1px solid rgb(255, 255, 255);
   background: rgb(255, 255, 255);
   border-radius: 15px;
+  transform: scale(1);
   transition: transform 0.2s;
   transition: box-shadow 0.2s;
 
@@ -23,7 +24,6 @@
   img {
     max-width: 250px;
     max-height: 300px;
-    cursor: zoom-in;
   }
 
   .product-description {
@@ -40,8 +40,11 @@
       transition: color 0.3s;
     }
 
-    .btn:hover {
-      color: grey;
+    .btn-add-to-cart:hover {
+      color: rgb(151, 179, 223);
+    }
+    .btn-favorite:hover {
+      color: rgb(170, 0, 0);
     }
 
     .btn:focus {

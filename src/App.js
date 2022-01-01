@@ -9,6 +9,8 @@ import ModalProduct from "./components/ModalProduct";
 
 function App() {
   const [productArray, setProductArray] = useState([]);
+  const [cartArray, setCartArray] = useState([]);
+
   const [navBarClass, setNavBarClass] = useState("hidden");
 
   const showNavBar = () => {
@@ -17,11 +19,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header cartArray={cartArray} setCartArray={setCartArray} />
       <ProductContainer
         productArray={productArray}
         setProductArray={setProductArray}
         showNavBar={showNavBar}
+        cartArray={cartArray}
+        setCartArray={setCartArray}
       />
       <About />
       <Footer />

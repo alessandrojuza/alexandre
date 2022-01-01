@@ -7,7 +7,15 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ReactTooltip from "react-tooltip";
 
-const Product = ({ imgUrl, nameUrl, priceUrl, id, description }) => {
+const Product = ({
+  imgUrl,
+  nameUrl,
+  priceUrl,
+  id,
+  description,
+  cartArray,
+  setCartArray,
+}) => {
   const [title, setTitle] = useState("");
   const [productId, setProductId] = useState("");
   const [price, setPrice] = useState("");
@@ -25,31 +33,36 @@ const Product = ({ imgUrl, nameUrl, priceUrl, id, description }) => {
     setModalClassName("hidden");
   };
 
+  const addToCart = () => {
+    setCartArray((prev) => [
+      {
+        cartPrice: priceUrl,
+        cartImg: imgUrl,
+        cartTitle: nameUrl,
+        cartId: id,
+      },
+      ...prev,
+    ]);
+    console.log(cartArray);
+    console.log(imgUrl, nameUrl, priceUrl);
+  };
+
   return (
     <div className="product">
       <div className="img-container">
-        <img src={imgUrl} alt="product image" onClick={renderModalProduct} />
+        <img src={imgUrl} alt="product image" />
       </div>
       <div className="product-description">
         <p>{nameUrl}</p>
-        <p>€ {priceUrl}</p>
+        <h3>€ {priceUrl}</h3>
       </div>
       <div className="button-container">
-        <AddShoppingCartIcon className="btn" data-tip="Add to cart" />
-        <FavoriteBorderIcon className="btn" data-tip="Add to Favorites" />
-        {/* <ZoomInIcon className="btn" /> */}
+        <AddShoppingCartIcon
+          className="btn btn-add-to-cart"
+          onClick={addToCart}
+        />
+        <FavoriteBorderIcon className="btn btn-favorite" />
       </div>
-      <ReactTooltip type="light" border="true" borderColor="grey" />
-      <ModalBackground modalClassName={modalClassName} />
-      <ModalProduct
-        imgUrl={imgUrl}
-        nameUrl={nameUrl}
-        priceUrl={priceUrl}
-        id={id}
-        description={description}
-        modalClassName={modalClassName}
-        hideModalProduct={hideModalProduct}
-      />
     </div>
   );
 };
