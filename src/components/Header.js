@@ -3,10 +3,11 @@ import "../styles/Header.scss";
 import logo from "../img/logo.png";
 import FadeIn from "react-fade-in";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
-const Header = () => {
+const Header = ({ showNavBar, setNavBarClass }) => {
   return (
-    <div className="header" id="home">
+    <div className="header" id="home" onScroll={showNavBar}>
       <div className="header-sub">
         <div className="div-1">
           <img src={logo} alt="logo" className="logo" />
@@ -15,7 +16,8 @@ const Header = () => {
             <a href="#about">About</a>
             <a href="#shop">Shop</a>
             <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
-            <ShoppingCartIcon className="btn" />
+            <FavoriteIcon className="btn btn-favorite" />
+            <ShoppingCartIcon className="btn btn-cart" />
 
             <p></p>
           </div>

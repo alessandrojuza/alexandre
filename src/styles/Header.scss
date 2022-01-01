@@ -55,6 +55,20 @@ $black: #000000;
         .btn {
           cursor: pointer;
         }
+
+        .btn-favorite {
+          transition: color 0.3s;
+        }
+        .btn-favorite:hover {
+          color: rgb(170, 0, 0);
+        }
+
+        .btn-cart {
+          transition: color 0.3s;
+        }
+        .btn-cart:hover {
+          color: rgb(151, 179, 223);
+        }
       }
     }
     .div-2 {

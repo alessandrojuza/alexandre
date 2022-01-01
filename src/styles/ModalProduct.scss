@@ -1,14 +1,83 @@
+// .background {
+//   height: 100vh;
+//   width: 100vw;
+//   background: black;
+// }
+
 .modal-product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.1fr 0.9fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
   position: fixed;
-  height: 700px;
+  height: 500px;
   width: 900px;
   background: white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
+
+  .div-1 {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+    justify-content: right;
+
+    .btn {
+      margin: 20px 20px 0 0;
+      color: rgb(49, 49, 49);
+      transition: color 0.3s;
+    }
+
+    .btn:hover {
+      color: rgb(94, 94, 94);
+      cursor: pointer;
+    }
+  }
+  .div-2 {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .div-3 {
+    grid-area: 2 / 2 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px 0 30px;
+
+    .add-to-cart,
+    .cancel {
+      border: none;
+      height: 50px;
+      width: 170px;
+      margin: 10px;
+      border-radius: 150px;
+      font-size: 14pt;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart:hover,
+    .cancel:hover {
+      background: rgb(49, 49, 49);
+      color: white;
+    }
+
+    .cancel {
+      border: 1px solid rgb(192, 192, 192);
+      background: white;
+    }
+  }
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }

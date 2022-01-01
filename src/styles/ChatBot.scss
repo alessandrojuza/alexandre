@@ -1,14 +1,41 @@
-.chatbot {
+.chatbot-container {
   position: fixed;
-  transform: scale(0.8);
-  bottom: 0%;
-  right: 0%;
-}
+  height: 400px;
 
-.hidden {
-  visibility: hidden;
-}
+  .cancel-icon {
+    position: fixed;
+    color: rgb(129, 129, 129);
+    bottom: 465px;
+    right: 1%;
+    cursor: pointer;
+  }
 
-.visible {
-  visibility: visible;
+  .help-icon {
+    position: fixed;
+    color: rgb(122, 122, 122);
+    bottom: 3%;
+    right: 2%;
+    cursor: pointer;
+    transform: scale(2);
+    transition: color 0.3s;
+  }
+
+  .help-icon:hover {
+    color: rgb(182, 182, 182);
+  }
+
+  .chatbot {
+    position: fixed;
+    transform: scale(0.8);
+    bottom: 0%;
+    right: 0%;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .visible {
+    visibility: visible;
+  }
 }

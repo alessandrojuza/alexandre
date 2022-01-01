@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/ProductContainer.scss";
 import Product from "./Product";
 
-const ProductContainer = ({ productArray, setProductArray }) => {
+const ProductContainer = ({ productArray, setProductArray, showNavBar }) => {
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
@@ -13,14 +13,20 @@ const ProductContainer = ({ productArray, setProductArray }) => {
   }, []);
 
   return (
-    <div className="product-container-parent" id="shop">
+    <div className="product-container-parent" id="shop" onScroll={showNavBar}>
       <div className="product-container-header">
         <h1>New Arrivals</h1>
       </div>
       <div className="product-container">
         {productArray.map((e) => {
           return (
-            <Product imgUrl={e.image} nameUrl={e.title} priceUrl={e.price} />
+            <Product
+              imgUrl={e.image}
+              nameUrl={e.title}
+              priceUrl={e.price}
+              id={e.id}
+              description={e.description}
+            />
           );
         })}
       </div>
