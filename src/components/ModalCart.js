@@ -3,13 +3,25 @@ import "../styles/ModalCart.scss";
 import CartProduct from "./CartProduct";
 
 const ModalCart = ({ modalCartClass, cartArray, setCartArray }) => {
+  const [buttonClass, setButtonClass] = useState("hidden");
+
   return (
-    <div className={`modal-cart ${modalCartClass}`}>
-      {cartArray.map((e) => {
-        return (
-          <CartProduct cartArray={cartArray} img={e.img} cartPrice={e.price} />
-        );
-      })}
+    <div className={`main-container ${buttonClass}`}>
+      <div className={`modal-cart ${modalCartClass}`}>
+        {cartArray.map((e, index) => {
+          return (
+            <CartProduct
+              cartArray={cartArray}
+              imgUrl={e.imgUrl}
+              priceUrl={e.priceUrl}
+              nameUrl={e.nameUrl}
+              id={e.id}
+              key={index}
+            />
+          );
+        })}
+        <button className={buttonClass}>CHECKOUT</button>
+      </div>
     </div>
   );
 };

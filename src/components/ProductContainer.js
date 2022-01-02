@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../styles/ProductContainer.scss";
 import Product from "./Product";
+import uniqid from "uniqid";
 
 const ProductContainer = ({
   productArray,
@@ -14,8 +15,6 @@ const ProductContainer = ({
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => setProductArray(res.data));
-
-    console.log(productArray);
   }, []);
 
   return (
@@ -24,7 +23,7 @@ const ProductContainer = ({
         <h1>New Arrivals</h1>
       </div>
       <div className="product-container">
-        {productArray.map((e) => {
+        {productArray.map((e, index) => {
           return (
             <Product
               imgUrl={e.image}
@@ -34,6 +33,8 @@ const ProductContainer = ({
               description={e.description}
               cartArray={cartArray}
               setCartArray={setCartArray}
+              productArray={productArray}
+              key={index}
             />
           );
         })}

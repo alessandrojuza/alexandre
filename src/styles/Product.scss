@@ -35,16 +35,12 @@
   }
 
   .button-container {
+    display: flex;
+    justify-content: center;
+
     .btn {
       margin: 0 5px 0 5px;
       transition: color 0.3s;
-    }
-
-    .btn-add-to-cart:hover {
-      color: rgb(151, 179, 223);
-    }
-    .btn-favorite:hover {
-      color: rgb(170, 0, 0);
     }
 
     .btn:focus {

@@ -8,10 +8,13 @@ import ModalCart from "./ModalCart";
 
 const Header = ({ showNavBar, setNavBarClass, cartArray, setCartArray }) => {
   const [modalCartClass, setModalCartClass] = useState("hidden");
-  const showModalCart = () =>
-    modalCartClass === "hidden"
-      ? setModalCartClass("visible")
-      : setModalCartClass("hidden");
+  const showModalCart = () => {
+    if (cartArray.length > 0) {
+      modalCartClass === "hidden"
+        ? setModalCartClass("visible")
+        : setModalCartClass("hidden");
+    }
+  };
 
   return (
     <div className="header" id="home" onScroll={showNavBar}>

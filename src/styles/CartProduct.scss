@@ -10,4 +10,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  img {
+    height: 80%;
+    max-width: 20%;
+  }
+
+  p {
+    font-size: 11pt;
+    margin: 0;
+    padding: 0 10px 0 10px;
+  }
+
+  h4 {
+    margin: 0;
+  }
 }

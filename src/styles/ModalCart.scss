@@ -1,24 +1,35 @@
-.modal-cart {
-  position: absolute;
-  top: 8%;
-  right: 2%;
-  height: 500px;
-  width: 400px;
-  background: rgb(223, 223, 223);
-  border: 1px solid grey;
-  border-radius: 10px;
-  overflow: scroll;
-  padding: 20px 0 20px 0;
+.main-container {
+  .modal-cart {
+    position: absolute;
+    top: 8%;
+    right: 2%;
+    height: 500px;
+    width: 400px;
+    background: rgb(223, 223, 223);
+    border: 1px solid grey;
+    border-radius: 10px;
+    overflow: scroll;
+    padding: 20px 0 20px 0;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.hidden {
-  visibility: hidden;
-}
+    button {
+      border: none;
+      background: rgb(49, 49, 49);
+      color: rgb(223, 223, 223);
+      height: 50px;
+      width: 150px;
+      font-size: 1pt;
+    }
+  }
 
-.visible {
-  visibility: visible;
+  .hidden {
+    visibility: hidden;
+  }
+
+  .visible {
+    visibility: visible;
+  }
 }

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Product.scss";
-import ModalProduct from "./ModalProduct";
-import ModalBackground from "./ModalBackground";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ZoomInIcon from "@mui/icons-material/ZoomIn";
-import ReactTooltip from "react-tooltip";
+import Anime, { anime } from "react-anime";
 
 const Product = ({
   imgUrl,
@@ -15,6 +12,8 @@ const Product = ({
   description,
   cartArray,
   setCartArray,
+  productArray,
+  play,
 }) => {
   const [title, setTitle] = useState("");
   const [productId, setProductId] = useState("");
@@ -22,29 +21,26 @@ const Product = ({
   const [img, setImg] = useState("");
   const [modalClassName, setModalClassName] = useState("hidden");
 
-  const renderModalProduct = () => {
-    setTitle(nameUrl);
-    setPrice(priceUrl);
-    setImg(imgUrl);
-    setModalClassName("visible");
-  };
+  const [playCartAnimation, setPlayCartAnimation] = useState(false);
+  const [playFavoriteAnimation, setFavoriteCartAnimation] = useState(false);
 
-  const hideModalProduct = () => {
-    setModalClassName("hidden");
+  const toggleCartAnimation = () => {
+    setPlayCartAnimation(true);
+  };
+  const toggleFavoriteAnimation = () => {
+    setFavoriteCartAnimation(true);
   };
 
   const addToCart = () => {
     setCartArray((prev) => [
       {
-        cartPrice: priceUrl,
-        cartImg: imgUrl,
-        cartTitle: nameUrl,
-        cartId: id,
+        imgUrl: imgUrl,
+        nameUrl: nameUrl,
+        priceUrl: priceUrl,
+        id: id,
       },
       ...prev,
     ]);
-    console.log(cartArray);
-    console.log(imgUrl, nameUrl, priceUrl);
   };
 
   return (
@@ -57,11 +53,36 @@ const Product = ({
         <h3>€ {priceUrl}</h3>
       </div>
       <div className="button-container">
-        <AddShoppingCartIcon
-          className="btn btn-add-to-cart"
-          onClick={addToCart}
-        />
-        <FavoriteBorderIcon className="btn btn-favorite" />
+        <Anime
+          delay={(el, index) => index * 240}
+          scale={[1, 0.5, 1]}
+          color={("rgb(43, 43, 43)", "rgb(170, 0, 0);")}
+          autoplay={playCartAnimation}
+          easing="linear"
+          duration={300}
+          className="animation"
+        >
+          <AddShoppingCartIcon
+            className="btn btn-add-to-cart"
+            onClick={addToCart}
+            onClick={toggleCartAnimation}
+          />
+        </Anime>
+
+        <Anime
+          delay={(el, index) => index * 240}
+          scale={[1, 0.5, 1]}
+          color={("rgb(43, 43, 43)", "rgb(170, 0, 0);")}
+          autoplay={playFavoriteAnimation}
+          easing="linear"
+          duration={300}
+          className="animation"
+        >
+          <FavoriteBorderIcon
+            className="btn btn-favorite"
+            onClick={toggleFavoriteAnimation}
+          />
+        </Anime>
       </div>
     </div>
   );
