@@ -72,6 +72,12 @@ $black: #000000;
           color: rgb(151, 179, 223);
         }
       }
+
+      .sidebar {
+        color: white;
+        margin-right: 30px;
+        transform: scale(1.5);
+      }
     }
     .div-2 {
       display: flex;
@@ -106,5 +112,9 @@ $black: #000000;
 
   .visible {
     visibility: visible;
+  }
+
+  .sidebar-hidden {
+    display: none;
   }
 }

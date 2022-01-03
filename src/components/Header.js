@@ -4,8 +4,10 @@ import logo from "../img/logo.png";
 import FadeIn from "react-fade-in";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import MenuIcon from "@mui/icons-material/Menu";
 import ModalCart from "./ModalCart";
 import ModalFavorite from "./ModalFavorite";
+import Sidebar from "./Sidebar";
 
 const Header = ({
   showNavBar,
@@ -79,6 +81,10 @@ const Header = ({
             />
 
             <p></p>
+          </div>
+          <div className="sidebar sidebar-hidden">
+            <MenuIcon />
+            <Sidebar />
           </div>
         </div>
         <div className="div-2">

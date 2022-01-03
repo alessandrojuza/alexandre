@@ -63,7 +63,7 @@ const Product = ({
       </div>
       <div className="product-description">
         <p>{nameUrl}</p>
-        <h3>€ {priceUrl}</h3>
+        <h3>€ {priceUrl.toFixed(2)}</h3>
       </div>
       <div className="button-container">
         <Anime
