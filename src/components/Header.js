@@ -5,14 +5,32 @@ import FadeIn from "react-fade-in";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ModalCart from "./ModalCart";
+import ModalFavorite from "./ModalFavorite";
 
-const Header = ({ showNavBar, setNavBarClass, cartArray, setCartArray }) => {
+const Header = ({
+  showNavBar,
+  setNavBarClass,
+  cartArray,
+  setCartArray,
+  favoriteArray,
+  setFavoriteArray,
+}) => {
   const [modalCartClass, setModalCartClass] = useState("hidden");
+  const [modalFavoriteClass, setModalFavoriteClass] = useState("hidden");
   const showModalCart = () => {
+    setModalFavoriteClass("hidden");
     if (cartArray.length > 0) {
       modalCartClass === "hidden"
         ? setModalCartClass("visible")
         : setModalCartClass("hidden");
+    }
+  };
+  const showModalFavorite = () => {
+    setModalCartClass("hidden");
+    if (favoriteArray.length > 0) {
+      modalFavoriteClass === "hidden"
+        ? setModalFavoriteClass("visible")
+        : setModalFavoriteClass("hidden");
     }
   };
 
@@ -26,7 +44,10 @@ const Header = ({ showNavBar, setNavBarClass, cartArray, setCartArray }) => {
             <a href="#about">About</a>
             <a href="#shop">Shop</a>
             <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
-            <FavoriteIcon className="btn btn-favorite" />
+            <FavoriteIcon
+              className="btn btn-favorite"
+              onClick={showModalFavorite}
+            />
             <ShoppingCartIcon
               className="btn btn-cart"
               onClick={showModalCart}
@@ -46,6 +67,11 @@ const Header = ({ showNavBar, setNavBarClass, cartArray, setCartArray }) => {
         modalCartClass={modalCartClass}
         cartArray={cartArray}
         setCartArray={setCartArray}
+      />
+      <ModalFavorite
+        modalFavoriteClass={modalFavoriteClass}
+        favoriteArray={favoriteArray}
+        setFavoriteArray={setFavoriteArray}
       />
     </div>
   );

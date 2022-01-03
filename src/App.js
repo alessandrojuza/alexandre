@@ -10,6 +10,7 @@ import ModalProduct from "./components/ModalProduct";
 function App() {
   const [productArray, setProductArray] = useState([]);
   const [cartArray, setCartArray] = useState([]);
+  const [favoriteArray, setFavoriteArray] = useState([]);
 
   const [navBarClass, setNavBarClass] = useState("hidden");
 
@@ -19,13 +20,20 @@ function App() {
 
   return (
     <div className="App">
-      <Header cartArray={cartArray} setCartArray={setCartArray} />
+      <Header
+        cartArray={cartArray}
+        setCartArray={setCartArray}
+        favoriteArray={favoriteArray}
+        setFavoriteArray={setFavoriteArray}
+      />
       <ProductContainer
         productArray={productArray}
         setProductArray={setProductArray}
         showNavBar={showNavBar}
         cartArray={cartArray}
         setCartArray={setCartArray}
+        favoriteArray={favoriteArray}
+        setFavoriteArray={setFavoriteArray}
       />
       <About />
       <Footer />

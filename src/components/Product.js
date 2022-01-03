@@ -14,6 +14,8 @@ const Product = ({
   setCartArray,
   productArray,
   play,
+  favoriteArray,
+  setFavoriteArray,
 }) => {
   const [title, setTitle] = useState("");
   const [productId, setProductId] = useState("");
@@ -32,7 +34,20 @@ const Product = ({
   };
 
   const addToCart = () => {
+    toggleCartAnimation();
     setCartArray((prev) => [
+      {
+        imgUrl: imgUrl,
+        nameUrl: nameUrl,
+        priceUrl: priceUrl,
+        id: id,
+      },
+      ...prev,
+    ]);
+  };
+  const addToFavorite = () => {
+    toggleFavoriteAnimation();
+    setFavoriteArray((prev) => [
       {
         imgUrl: imgUrl,
         nameUrl: nameUrl,
@@ -64,8 +79,8 @@ const Product = ({
         >
           <AddShoppingCartIcon
             className="btn btn-add-to-cart"
-            onClick={addToCart}
-            onClick={toggleCartAnimation}
+            onClick={(toggleCartAnimation, addToCart)}
+            // onClick={addToCart}
           />
         </Anime>
 
@@ -80,7 +95,7 @@ const Product = ({
         >
           <FavoriteBorderIcon
             className="btn btn-favorite"
-            onClick={toggleFavoriteAnimation}
+            onClick={(toggleFavoriteAnimation, addToFavorite)}
           />
         </Anime>
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/CartProduct.scss";
+import "../styles/FavoriteProduct.scss";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const CartProduct = ({
+const FavoriteProduct = ({
   cartArray,
   setCartArray,
   imgUrl,
@@ -16,12 +16,11 @@ const CartProduct = ({
   };
 
   return (
-    <div className="cart-product">
+    <div className="favorite-product">
       <p></p>
       <img src={imgUrl} alt="product image" />
       <div className="name-price-container">
         <p>{shortenProductName(nameUrl)}</p>
-        {/* <p>{nameUrl.slice(0, ) + "..."}</p> */}
         <h4>€ {priceUrl}</h4>
       </div>
       <DeleteIcon />
@@ -29,4 +28,4 @@ const CartProduct = ({
   );
 };
 
-export default CartProduct;
+export default FavoriteProduct;

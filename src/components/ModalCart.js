@@ -8,6 +8,8 @@ const ModalCart = ({ modalCartClass, cartArray, setCartArray }) => {
   return (
     <div className={`main-container ${buttonClass}`}>
       <div className={`modal-cart ${modalCartClass}`}>
+        <h3>Your cart:</h3>
+
         {cartArray.map((e, index) => {
           return (
             <CartProduct
