@@ -17,12 +17,6 @@ const Product = ({
   favoriteArray,
   setFavoriteArray,
 }) => {
-  const [title, setTitle] = useState("");
-  const [productId, setProductId] = useState("");
-  const [price, setPrice] = useState("");
-  const [img, setImg] = useState("");
-  const [modalClassName, setModalClassName] = useState("hidden");
-
   const [playCartAnimation, setPlayCartAnimation] = useState(false);
   const [playFavoriteAnimation, setFavoriteCartAnimation] = useState(false);
 

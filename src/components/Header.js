@@ -65,11 +65,13 @@ const Header = ({
       </div>
       <ModalCart
         modalCartClass={modalCartClass}
+        setModalCartClass={setModalCartClass}
         cartArray={cartArray}
         setCartArray={setCartArray}
       />
       <ModalFavorite
         modalFavoriteClass={modalFavoriteClass}
+        setModalFavoriteClass={setModalFavoriteClass}
         favoriteArray={favoriteArray}
         setFavoriteArray={setFavoriteArray}
       />

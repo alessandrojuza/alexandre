@@ -3,6 +3,11 @@ import "../styles/CartProduct.scss";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const CartProduct = ({
+  topMessage,
+  setTopMessage,
+  getTopMessage,
+  modalCartClass,
+  setModalCartClass,
   cartArray,
   setCartArray,
   imgUrl,
@@ -15,16 +20,19 @@ const CartProduct = ({
     else return name;
   };
 
+  const deleteItem = () => {
+    setCartArray(cartArray.filter((e) => e.id !== id));
+  };
+
   return (
     <div className="cart-product">
       <p></p>
       <img src={imgUrl} alt="product image" />
       <div className="name-price-container">
         <p>{shortenProductName(nameUrl)}</p>
-        {/* <p>{nameUrl.slice(0, ) + "..."}</p> */}
         <h4>€ {priceUrl}</h4>
       </div>
-      <DeleteIcon />
+      <DeleteIcon onClick={deleteItem} className="delete-icon" />
     </div>
   );
 };

@@ -26,4 +26,12 @@
   h4 {
     margin: 0;
   }
+
+  .delete-icon {
+    transition: color 0.3s;
+  }
+  .delete-icon:hover {
+    color: rgb(99, 99, 99);
+    cursor: pointer;
+  }
 }

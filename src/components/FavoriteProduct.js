@@ -3,8 +3,8 @@ import "../styles/FavoriteProduct.scss";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const FavoriteProduct = ({
-  cartArray,
-  setCartArray,
+  favoriteArray,
+  setFavoriteArray,
   imgUrl,
   nameUrl,
   priceUrl,
@@ -15,6 +15,10 @@ const FavoriteProduct = ({
     else return name;
   };
 
+  const deleteItem = () => {
+    setFavoriteArray(favoriteArray.filter((e) => e.id !== id));
+  };
+
   return (
     <div className="favorite-product">
       <p></p>
@@ -23,7 +27,7 @@ const FavoriteProduct = ({
         <p>{shortenProductName(nameUrl)}</p>
         <h4>€ {priceUrl}</h4>
       </div>
-      <DeleteIcon />
+      <DeleteIcon onClick={deleteItem} className="delete-icon" />
     </div>
   );
 };
