@@ -16,6 +16,8 @@ const Product = ({
   play,
   favoriteArray,
   setFavoriteArray,
+  totalCart,
+  setTotalCart,
 }) => {
   const [playCartAnimation, setPlayCartAnimation] = useState(false);
   const [playFavoriteAnimation, setFavoriteCartAnimation] = useState(false);
@@ -38,6 +40,8 @@ const Product = ({
       },
       ...prev,
     ]);
+    setTotalCart(Number(totalCart) + Number(priceUrl));
+    console.log(totalCart);
   };
   const addToFavorite = () => {
     toggleFavoriteAnimation();
@@ -64,8 +68,7 @@ const Product = ({
       <div className="button-container">
         <Anime
           delay={(el, index) => index * 240}
-          scale={[1, 0.5, 1]}
-          color={("rgb(43, 43, 43)", "rgb(170, 0, 0);")}
+          scale={[1, 1.4, 1]}
           autoplay={playCartAnimation}
           easing="linear"
           duration={300}
@@ -80,8 +83,7 @@ const Product = ({
 
         <Anime
           delay={(el, index) => index * 240}
-          scale={[1, 0.5, 1]}
-          color={("rgb(43, 43, 43)", "rgb(170, 0, 0);")}
+          scale={[1, 1.4, 1]}
           autoplay={playFavoriteAnimation}
           easing="linear"
           duration={300}

@@ -14,6 +14,8 @@ const CartProduct = ({
   nameUrl,
   priceUrl,
   id,
+  totalCart,
+  setTotalCart,
 }) => {
   const shortenProductName = (name) => {
     if (name.length > 40) return name.slice(0, 40) + "...";
@@ -22,6 +24,7 @@ const CartProduct = ({
 
   const deleteItem = () => {
     setCartArray(cartArray.filter((e) => e.id !== id));
+    setTotalCart(Number(totalCart) - Number(priceUrl));
   };
 
   return (

@@ -84,4 +84,27 @@ $black: #000000;
       }
     }
   }
+
+  .favorite-is-empty,
+  .cart-is-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 500px;
+    background: white;
+    color: rgba(0, 0, 0, 0.541);
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .visible {
+    visibility: visible;
+  }
 }

@@ -14,9 +14,14 @@ const Header = ({
   setCartArray,
   favoriteArray,
   setFavoriteArray,
+  totalCart,
+  setTotalCart,
 }) => {
   const [modalCartClass, setModalCartClass] = useState("hidden");
   const [modalFavoriteClass, setModalFavoriteClass] = useState("hidden");
+  const [favoriteAlertShow, setFavoriteAlertShow] = useState("hidden");
+  const [cartAlertShow, setCartAlertShow] = useState("hidden");
+
   const showModalCart = () => {
     setModalFavoriteClass("hidden");
     if (cartArray.length > 0) {
@@ -24,6 +29,7 @@ const Header = ({
         ? setModalCartClass("visible")
         : setModalCartClass("hidden");
     }
+    showCartAlert();
   };
   const showModalFavorite = () => {
     setModalCartClass("hidden");
@@ -31,6 +37,25 @@ const Header = ({
       modalFavoriteClass === "hidden"
         ? setModalFavoriteClass("visible")
         : setModalFavoriteClass("hidden");
+    }
+    showFavoriteAlert();
+  };
+
+  const showFavoriteAlert = () => {
+    if (favoriteArray.length === 0) {
+      setFavoriteAlertShow("visible");
+      setTimeout(() => {
+        setFavoriteAlertShow("hidden");
+      }, 2000);
+    }
+  };
+
+  const showCartAlert = () => {
+    if (cartArray.length === 0) {
+      setCartAlertShow("visible");
+      setTimeout(() => {
+        setCartAlertShow("hidden");
+      }, 2000);
     }
   };
 
@@ -41,8 +66,8 @@ const Header = ({
           <img src={logo} alt="logo" className="logo" />
           <div className="menu">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
             <a href="#shop">Shop</a>
+            <a href="#about">About</a>
             <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
             <FavoriteIcon
               className="btn btn-favorite"
@@ -68,6 +93,8 @@ const Header = ({
         setModalCartClass={setModalCartClass}
         cartArray={cartArray}
         setCartArray={setCartArray}
+        totalCart={totalCart}
+        setTotalCart={setTotalCart}
       />
       <ModalFavorite
         modalFavoriteClass={modalFavoriteClass}
@@ -75,6 +102,12 @@ const Header = ({
         favoriteArray={favoriteArray}
         setFavoriteArray={setFavoriteArray}
       />
+      <div className={`favorite-is-empty ${favoriteAlertShow}`}>
+        <p>You have no favorites!</p>
+      </div>
+      <div className={`cart-is-empty ${cartAlertShow}`}>
+        <p>Your cart is empty!</p>
+      </div>
     </div>
   );
 };

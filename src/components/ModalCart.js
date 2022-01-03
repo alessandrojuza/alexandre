@@ -7,9 +7,12 @@ const ModalCart = ({
   setModalCartClass,
   cartArray,
   setCartArray,
+  totalCart,
+  setTotalCart,
 }) => {
-  const [buttonClass, setButtonClass] = useState("hidden");
+  const [buttonClass, setButtonClass] = useState("visible");
   const [topMessage, setTopMessage] = useState("");
+  const [grandTotal, setGrandTotal] = useState("");
 
   const getTopMessage = () => {
     setTopMessage(cartArray.length === 0 ? "Your cart is empty" : "Your cart:");
@@ -17,16 +20,22 @@ const ModalCart = ({
 
   const hideIfEmpty = () => {
     if (cartArray.length === 0) setModalCartClass("hidden");
+    if (cartArray.length === 0) setButtonClass("");
+  };
+
+  const handleTotal = () => {
+    if (cartArray.length > 0) setGrandTotal(totalCart.toFixed(2));
+    else setGrandTotal("");
   };
 
   useEffect(getTopMessage);
   useEffect(hideIfEmpty);
+  useEffect(handleTotal);
 
   return (
     <div className={`main-container ${buttonClass}`}>
       <div className={`modal-cart ${modalCartClass}`}>
         <h4>{topMessage}</h4>
-
         {cartArray.map((e, index) => {
           return (
             <CartProduct
@@ -42,10 +51,14 @@ const ModalCart = ({
               nameUrl={e.nameUrl}
               id={e.id}
               key={index}
+              totalCart={totalCart}
+              setTotalCart={setTotalCart}
             />
           );
         })}
-        <button className={buttonClass}>CHECKOUT</button>
+        <button
+          className={`${buttonClass} btn`}
+        >{`CHECKOUT € ${grandTotal}`}</button>
       </div>
     </div>
   );

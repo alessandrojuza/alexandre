@@ -11,6 +11,7 @@ function App() {
   const [productArray, setProductArray] = useState([]);
   const [cartArray, setCartArray] = useState([]);
   const [favoriteArray, setFavoriteArray] = useState([]);
+  const [totalCart, setTotalCart] = useState("");
 
   const [navBarClass, setNavBarClass] = useState("hidden");
 
@@ -25,6 +26,8 @@ function App() {
         setCartArray={setCartArray}
         favoriteArray={favoriteArray}
         setFavoriteArray={setFavoriteArray}
+        totalCart={totalCart}
+        setTotalCart={setTotalCart}
       />
       <ProductContainer
         productArray={productArray}
@@ -34,6 +37,8 @@ function App() {
         setCartArray={setCartArray}
         favoriteArray={favoriteArray}
         setFavoriteArray={setFavoriteArray}
+        totalCart={totalCart}
+        setTotalCart={setTotalCart}
       />
       <About />
       <Footer />

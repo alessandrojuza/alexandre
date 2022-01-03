@@ -12,6 +12,8 @@ const ProductContainer = ({
   setCartArray,
   favoriteArray,
   setFavoriteArray,
+  totalCart,
+  setTotalCart,
 }) => {
   useEffect(() => {
     axios
@@ -39,6 +41,8 @@ const ProductContainer = ({
               favoriteArray={favoriteArray}
               setFavoriteArray={setFavoriteArray}
               key={index}
+              totalCart={totalCart}
+              setTotalCart={setTotalCart}
             />
           );
         })}

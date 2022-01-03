@@ -44,6 +44,9 @@ const ModalFavorite = ({
           );
         })}
       </div>
+      <div className="alert-favorite-empty">
+        <p>No favorite items</p>
+      </div>
     </div>
   );
 };
