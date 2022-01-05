@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 import "../styles/ChatBot.scss";
+import "../queries/ChatBotQueries.scss";
 import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 import HelpRoundedIcon from "@mui/icons-material/HelpRounded";
 
