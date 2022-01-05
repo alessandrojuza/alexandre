@@ -64,7 +64,7 @@ const Header = ({
 
   return (
     <div className="header" id="home">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="header-sub">
         <div className="div-1">
           <img src={logo} alt="logo" className="logo" />
@@ -108,12 +108,12 @@ const Header = ({
         favoriteArray={favoriteArray}
         setFavoriteArray={setFavoriteArray}
       />
-      <div className={`favorite-is-empty ${favoriteAlertShow}`}>
+      {/* <div className={`favorite-is-empty ${favoriteAlertShow}`}>
         <p>You have no favorites!</p>
       </div>
       <div className={`cart-is-empty ${cartAlertShow}`}>
         <p>Your cart is empty!</p>
-      </div>
+      </div> */}
     </div>
   );
 };
