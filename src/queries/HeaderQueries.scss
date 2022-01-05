@@ -5,14 +5,37 @@
   .menu {
     visibility: visible;
   }
+  .logo-responsive {
+    display: none;
+  }
 }
 @media screen and (max-width: 820px) {
   .sidebar-btn {
     visibility: visible;
   }
-  .menu {
-    visibility: hidden;
-    display: none;
+  .div-1 {
+    .menu {
+      display: none;
+    }
+  }
+
+  .div-1 {
+    .logo {
+      display: none;
+    }
+    .menu {
+      .menu-item {
+        display: none;
+      }
+    }
+  }
+
+  .div-2 {
+    .fadein {
+      .motto {
+        display: none;
+      }
+    }
   }
 }
 
@@ -24,6 +47,14 @@
           visibility: hidden;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .div-1 {
+    .logo-responsive {
+      width: 180px;
     }
   }
 }

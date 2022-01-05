@@ -64,25 +64,38 @@ const Header = ({
 
   return (
     <div className="header" id="home">
-      {/* <Sidebar /> */}
       <div className="header-sub">
         <div className="div-1">
-          <img src={logo} alt="logo" className="logo" />
-
+          <div className="logo-button-container">
+            <img src={logo} alt="logo" className="logo" />
+            <MenuIcon className="sidebar-btn" />
+            <img src={logo} alt="logo" className="logo-responsive" />
+          </div>
           <div className="menu">
-            <a href="#home">Home</a>
-            <a href="#shop">Shop</a>
-            <a href="#about">About</a>
-            <a href="mailto:mascia.alessandro89@gmail.com">Contact</a>
+            <a href="#home" className="menu-item">
+              Home
+            </a>
+            <a href="#shop" className="menu-item">
+              Shop
+            </a>
+            <a href="#about" className="menu-item">
+              About
+            </a>
+            <a
+              href="mailto:mascia.alessandro89@gmail.com"
+              className="menu-item"
+            >
+              Contact
+            </a>
             <FavoriteIcon
-              className="btn btn-favorite"
+              className="btn btn-favorite menu-item"
               onClick={showModalFavorite}
             />
             <ShoppingCartIcon
-              className="btn btn-cart"
+              className="btn btn-cart menu-item"
               onClick={showModalCart}
             />
-            <MenuIcon className="sidebar-btn" />
+            {/* <MenuIcon className="sidebar-btn" /> */}
 
             <p></p>
           </div>

@@ -16,11 +16,6 @@ html {
   background-image: url(../img/header-img.jpg);
   background-size: cover;
 
-  .logo {
-    width: 200px;
-    margin-left: 30px;
-  }
-
   h1 {
     margin: 0;
     color: white;
@@ -52,6 +47,19 @@ html {
 
       a:hover {
         border-bottom: 1px solid white;
+      }
+
+      .logo-button-container {
+        display: flex;
+        .logo {
+          // width: 200px;
+          height: 30px;
+          margin-left: 30px;
+        }
+        .logo-responsive {
+          height: 25px;
+          margin-top: 7px;
+        }
       }
 
       .menu {
