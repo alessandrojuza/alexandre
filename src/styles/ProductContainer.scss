@@ -17,6 +17,7 @@ body {
   .product-container {
     display: grid;
     justify-items: center;
+    max-width: 100%;
 
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);

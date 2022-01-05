@@ -21,6 +21,7 @@
   .product-container-parent {
     padding: 80px 10px 120px 5px;
     .product-container {
+      max-width: 100%;
       grid-template-columns: repeat(1, 1fr) !important;
       grid-gap: 150px;
     }
