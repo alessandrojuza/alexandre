@@ -1,0 +1,17 @@
+@media screen and (max-width: 980px) {
+  .about-sub-container {
+    flex-direction: column;
+
+    img {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .about-sub-container {
+    .text-container {
+      transform: scale(0.8);
+    }
+  }
+}

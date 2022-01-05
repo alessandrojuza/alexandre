@@ -14,6 +14,14 @@ $black: #000000;
     margin: 0;
     color: white;
   }
+
+  .video-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // mix-blend-mode: difference;
+  }
+
   .header-sub {
     display: grid;
     grid-template-rows: 0.1fr 0.8fr 0.1fr;
@@ -73,7 +81,10 @@ $black: #000000;
         }
       }
 
-      .sidebar {
+      .sidebar-btn {
+        position: absolute;
+        right: 5%;
+        top: 5%;
         color: white;
         margin-right: 30px;
         transform: scale(1.5);

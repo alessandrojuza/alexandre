@@ -1,0 +1,28 @@
+@media screen and (min-width: 821px) {
+  .sidebar-btn {
+    visibility: hidden;
+  }
+  .menu {
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 820px) {
+  .sidebar-btn {
+    visibility: visible;
+  }
+  .menu {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header-sub {
+    .div-2 {
+      .fadein {
+        .motto {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

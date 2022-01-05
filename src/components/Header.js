@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "../styles/Header.scss";
+import "../queries/HeaderQueries.scss";
 import logo from "../img/logo.png";
 import FadeIn from "react-fade-in";
+import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import MenuIcon from "@mui/icons-material/Menu";
 import ModalCart from "./ModalCart";
 import ModalFavorite from "./ModalFavorite";
 import Sidebar from "./Sidebar";
@@ -62,10 +63,13 @@ const Header = ({
   };
 
   return (
-    <div className="header" id="home" onScroll={showNavBar}>
+    <div className="header" id="home">
+      <Sidebar />
       <div className="header-sub">
         <div className="div-1">
           <img src={logo} alt="logo" className="logo" />
+          <MenuIcon className="sidebar-btn" />
+
           <div className="menu">
             <a href="#home">Home</a>
             <a href="#shop">Shop</a>
@@ -82,14 +86,10 @@ const Header = ({
 
             <p></p>
           </div>
-          <div className="sidebar sidebar-hidden">
-            <MenuIcon />
-            <Sidebar />
-          </div>
         </div>
         <div className="div-2">
-          <FadeIn transitionDuration="2500">
-            <h1>AS UNIQUE AS YOU ARE.</h1>
+          <FadeIn transitionDuration="2500" className="fadein">
+            <h1 className="motto">AS UNIQUE AS YOU ARE.</h1>
           </FadeIn>
         </div>
         <div className="div-3"></div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Product.scss";
+import "../queries/ProductQueries.scss";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Anime, { anime } from "react-anime";

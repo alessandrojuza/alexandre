@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../styles/ProductContainer.scss";
+import "../queries/ProductContainerQueries.scss";
 import Product from "./Product";
-import uniqid from "uniqid";
 
 const ProductContainer = ({
   productArray,

@@ -1,0 +1,33 @@
+@media screen and (max-width: 1350px) {
+  .product {
+    transform: scale(0.95);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .product {
+    transform: scale(1);
+    margin: 50px 0 50px 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  .product {
+    transform: scale(0.9);
+    margin: 0 10px 0 10px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .product {
+    transform: scale(1.2);
+    margin-bottom: 0px 10px 20px 10px;
+  }
+}
+
+@media screen and (max-width: 779px) {
+  .product {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 480px) {
+}
