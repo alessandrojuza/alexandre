@@ -5,7 +5,7 @@ import ProductContainer from "./components/ProductContainer";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Bot from "./components/ChatBot";
-import ModalProduct from "./components/ModalProduct";
+import banner1 from "./img/sale-banner-1.png";
 
 function App() {
   const [productArray, setProductArray] = useState([]);
@@ -29,6 +29,7 @@ function App() {
         totalCart={totalCart}
         setTotalCart={setTotalCart}
       />
+
       <ProductContainer
         productArray={productArray}
         setProductArray={setProductArray}
@@ -40,6 +41,9 @@ function App() {
         totalCart={totalCart}
         setTotalCart={setTotalCart}
       />
+      <div className="banner-1">
+        <img src={banner1} alt="sale banner" className="banner-1" />
+      </div>
       <About />
       <Footer />
       {/* <NavBar navBarClass={navBarClass} /> */}
