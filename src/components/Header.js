@@ -24,6 +24,7 @@ const Header = ({
   const [modalFavoriteClass, setModalFavoriteClass] = useState("hidden");
   const [favoriteAlertShow, setFavoriteAlertShow] = useState("hidden");
   const [cartAlertShow, setCartAlertShow] = useState("hidden");
+  const [sideBarClass, setSideBarClass] = useState("hidden");
 
   const showModalCart = () => {
     setModalFavoriteClass("hidden");
@@ -62,15 +63,22 @@ const Header = ({
     }
   };
 
+  const openSideBar = () => {
+    setSideBarClass("visible");
+  };
+
   return (
     <div className="header" id="home">
       <div className="header-sub">
-        {/* <Sidebar /> */}
+        <Sidebar
+          sideBarClass={sideBarClass}
+          setSideBarClass={setSideBarClass}
+        />
 
         <div className="div-1">
           <div className="logo-button-container">
             <img src={logo} alt="logo" className="logo" />
-            <MenuIcon className="sidebar-btn" />
+            <MenuIcon className="sidebar-btn" onClick={openSideBar} />
             <img src={logo} alt="logo" className="logo-responsive" />
           </div>
           <div className="menu">

@@ -14,19 +14,17 @@
     visibility: visible;
   }
   .div-1 {
-    .menu {
+    .menu-item {
       display: none;
+    }
+    .menu {
+      width: 10%;
     }
   }
 
   .div-1 {
     .logo {
       display: none;
-    }
-    .menu {
-      .menu-item {
-        display: none;
-      }
     }
   }
 

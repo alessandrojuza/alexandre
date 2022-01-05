@@ -23,6 +23,18 @@
     font-size: 48pt;
     font-weight: 700;
     align-self: end;
+
+    .exit-button {
+      cursor: pointer;
+    }
+  }
+
+  .section-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 24pt;
+    text-decoration: none;
+    color: black;
   }
 
   .bottom-container {
