@@ -86,11 +86,12 @@ html {
       }
 
       .sidebar-btn {
-        position: absolute;
+        position: default;
         right: 5%;
         top: 5%;
         color: white;
         margin-right: 30px;
+        margin-top: 10px;
         transform: scale(1.5);
       }
     }

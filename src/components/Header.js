@@ -68,7 +68,6 @@ const Header = ({
       <div className="header-sub">
         <div className="div-1">
           <img src={logo} alt="logo" className="logo" />
-          <MenuIcon className="sidebar-btn" />
 
           <div className="menu">
             <a href="#home">Home</a>
@@ -83,6 +82,7 @@ const Header = ({
               className="btn btn-cart"
               onClick={showModalCart}
             />
+            <MenuIcon className="sidebar-btn" />
 
             <p></p>
           </div>
