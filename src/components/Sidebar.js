@@ -5,7 +5,8 @@ const Sidebar = () => {
   const [sideBarClass, setSideBarClass] = useState("hidden");
 
   return (
-    <div className={`sidebar ${sideBarClass}`}>
+    <div className={`sidebar`}>
+      {/* <div className={`sidebar ${sideBarClass}`}> */}
       <div className="upper-container">
         <a>X</a>
       </div>

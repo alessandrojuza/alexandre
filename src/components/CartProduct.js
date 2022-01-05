@@ -33,7 +33,7 @@ const CartProduct = ({
       <img src={imgUrl} alt="product image" />
       <div className="name-price-container">
         <p>{shortenProductName(nameUrl)}</p>
-        <h4>€ {priceUrl}</h4>
+        <h4>€ {priceUrl.toFixed(2)}</h4>
       </div>
       <DeleteIcon onClick={deleteItem} className="delete-icon" />
     </div>
