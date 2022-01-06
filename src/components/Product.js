@@ -10,12 +10,7 @@ const Product = ({
   nameUrl,
   priceUrl,
   id,
-  description,
-  cartArray,
   setCartArray,
-  productArray,
-  play,
-  favoriteArray,
   setFavoriteArray,
   totalCart,
   setTotalCart,
@@ -78,7 +73,6 @@ const Product = ({
           <AddShoppingCartIcon
             className="btn btn-add-to-cart"
             onClick={(toggleCartAnimation, addToCart)}
-            // onClick={addToCart}
           />
         </Anime>
 

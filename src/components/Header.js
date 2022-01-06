@@ -11,8 +11,6 @@ import ModalFavorite from "./ModalFavorite";
 import Sidebar from "./Sidebar";
 
 const Header = ({
-  showNavBar,
-  setNavBarClass,
   cartArray,
   setCartArray,
   favoriteArray,

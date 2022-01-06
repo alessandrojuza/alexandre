@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header";
 import ProductContainer from "./components/ProductContainer";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Bot from "./components/ChatBot";
-import banner1 from "./img/sale-banner-1.png";
+import banner1 from "./img/sale-banner-1.jpg";
 
 function App() {
   const [productArray, setProductArray] = useState([]);
@@ -46,7 +46,6 @@ function App() {
       </div>
       <About />
       <Footer />
-      {/* <NavBar navBarClass={navBarClass} /> */}
       <Bot />
     </div>
   );

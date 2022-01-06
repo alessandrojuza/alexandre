@@ -3,11 +3,6 @@ import "../styles/CartProduct.scss";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const CartProduct = ({
-  topMessage,
-  setTopMessage,
-  getTopMessage,
-  modalCartClass,
-  setModalCartClass,
   cartArray,
   setCartArray,
   imgUrl,
